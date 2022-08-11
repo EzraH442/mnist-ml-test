@@ -4,4 +4,5 @@ from tensorflow.keras import layers
 
 
 def test_function():
-    print("hello")
+    print("hello world")
+    print("hh")

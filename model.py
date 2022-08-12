@@ -26,5 +26,3 @@ class Model:
     def test(self, data):
         print("test")
 
-
-

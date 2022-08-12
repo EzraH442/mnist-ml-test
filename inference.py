@@ -1,3 +1,3 @@
 import model
 
-model.test_function()
+model.test_function(" world")

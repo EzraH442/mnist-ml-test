@@ -1,11 +1,14 @@
 import pandas
+import MnistModel
 
 
 def main():
+    print("main")
+    mymodel = MnistModel()
+
     # preprocess()
     # train()
     # evaluate()
-    print("main")
 
 
 if __name__ == "__main__":

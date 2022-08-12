@@ -3,11 +3,9 @@ from model import Model
 
 def main():
     model = Model()
-
-    # load data
-    # initialize model
-    # train model
-    # save model to file
+    # load trained model
+    # evaluate model
+    # save metrics to file
 
 
 if __name__ == "__main__":

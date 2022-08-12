@@ -34,11 +34,28 @@ class Model:
 
         self.model.summary()
 
-    def train(self, data):
-        print("traing")
+    def train(self, x_train, y_train):
+        print("##### Started Training #####")
 
-    def test(self, data):
-        print("test")
+        self.model.compile(
+            loss=keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+            optimizer=keras.optimizers.RMSprop(),
+            metrics=["accuracy", "mse"],
+        )
+
+        self.history = self.model.fit(
+            x_train, y_train, batch_size=64, epochs=2, validation_split=0.2
+        )
+        print("##### Finished Training #####")
+
+    def evaluate(self, x_test, y_test):
+        print("##### Started Evaluation #####")
+        test_scores = self.model.evaluate(x_test, y_test, verbose=2)
+
+        for i in range(0, len(self.model.metrics_names) - 1):
+            print(self.model.metrics_names[i] + ": " + test_scores[i])
+
+        print("##### Finished Evaluation #####")
 
     def save(self, path: str):
         self.model.save(path)

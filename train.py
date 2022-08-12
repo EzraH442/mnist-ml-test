@@ -1,9 +1,10 @@
 from model import Model
 
+
 def main():
     model = Model()
 
-    model.train('stub')
+    model.train("stub")
 
     # preprocess()
     # train()

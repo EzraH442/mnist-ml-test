@@ -1,10 +1,9 @@
-import pandas
-import MnistModel
-
+from model import Model
 
 def main():
-    print("main")
-    mymodel = MnistModel()
+    model = Model()
+
+    model.train('stub')
 
     # preprocess()
     # train()
